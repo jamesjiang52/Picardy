@@ -26,13 +26,13 @@ def play_chord(notes, tempo, duration):
     pg.init()
     pg.mixer.music.load(filepath)
     pg.mixer.music.play()
-    time.sleep(duration*60/tempo)
 
     os.remove(filepath)
 
 
 def main(argv):
     play_chord(utils.get_indices(lut.lut[utils.get_canonical_name(argv[1])]), 60, 1)
+    time.sleep(1)
 
 
 if __name__ == "__main__":
